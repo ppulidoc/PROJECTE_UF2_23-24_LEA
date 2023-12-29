@@ -1,1 +1,8 @@
-<p>cistella works!</p>
+<div *ngIf="cistellaService.obtenerCistella().length > 0">
+  <h2>Cesta:</h2>
+  <div *ngFor="let producto of cistellaService.obtenerCistella(); let i = index">
+    <p>{{ producto.nombre }} - {{ producto.precio }}</p>
+    <button (click)="quitarDeLaCistella(i)">Quitar de la cesta</button>
+  </div>
+  <p>Total: {{ cistellaService.obtenerPrecioTotal() }}</p>
+</div>

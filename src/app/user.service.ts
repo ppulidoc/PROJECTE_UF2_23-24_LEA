@@ -8,6 +8,7 @@ export class UserService {
   private usuariosRegistrados: any[] = [];
 
   constructor() {}
+  
 
   getUsuariosRegistrados(): any[] {
     return this.usuariosRegistrados;

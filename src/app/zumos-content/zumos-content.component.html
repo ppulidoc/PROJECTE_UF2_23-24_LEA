@@ -1,1 +1,4 @@
-<p>zumos-content works!</p>
+<div *ngFor="let producto of zumosDisponibles">
+  <p>{{ producto.nombre }} - {{ producto.precio }}</p>
+  <button (click)="agregarALaCistella(producto)">Agregar a la cesta</button>
+</div>
