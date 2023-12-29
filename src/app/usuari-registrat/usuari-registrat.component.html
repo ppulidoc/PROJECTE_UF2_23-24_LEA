@@ -1,0 +1,17 @@
+
+<div *ngIf="!usuarioIdentificado">
+  <form [formGroup]="loginForm" (ngSubmit)="iniciarSesion()">
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" formControlName="correo" required>
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" formControlName="contrasena" required>
+
+    <button type="submit">Iniciar Sesión</button>
+  </form>
+</div>
+
+<div *ngIf="usuarioIdentificado">
+  <p>Bienvenido, {{ nombreUsuario }}!</p>
+  <button (click)="cerrarSesion()">Cerrar Sesión</button>
+</div>
